@@ -1,0 +1,124 @@
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #111729;
+    background-image: url("assets/bg-illustration.svg");
+    background-repeat: no-repeat;
+    background-position: 50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#first-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#input-container {
+    width: 90%;
+    max-width: 40rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.input-url {
+    width: 100%;
+    border: none;
+    color: #f2f5f9;
+    background-color: black;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.input-url:hover {
+    outline: 2px solid #f2f5f9;
+}
+
+.input-url:focus {
+    outline: 2px solid #3662e3;
+}
+
+.get-qr {
+    border: none;
+    color: #f2f5f9;
+    background-color: #3662e3;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    cursor: pointer;
+}
+
+.get-qr:hover {
+    filter: brightness(1.2);
+}
+
+header {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+#qr-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#qr-bg {
+    background-color: #4e80ee33;
+    border-radius: 20rem;
+    padding: 2rem;
+}
+
+#qr {
+    background-color: #f2f5f9;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.buttons > a {
+    text-decoration: none;
+    border: none;
+    width: 10rem;
+    border-radius: 1rem;
+    padding: 1rem 0;
+    background-color: #3662e3;
+    color: #f2f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+a > img {
+    width: 1.5rem;
+}
+
+a:hover {
+    filter: brightness(1.3);
+}
+
+.no-display {
+    display: none !important;
+}

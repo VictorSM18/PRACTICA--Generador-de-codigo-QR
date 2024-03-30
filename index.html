@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>QR code generator</title>
+    </head>
+    <body>
+        <section id="first-container">
+            <div id="logo">
+                <img src="assets/logo-qr-generator.svg" alt="" />
+            </div>
+            <div id="input-container">
+                <input
+                    id="url"
+                    class="input-url"
+                    type="text"
+                    placeholder="Enter an url"
+                />
+                <button class="get-qr" type="button" aria-label="GET QR">
+                    QR code
+                </button>
+            </div>
+        </section>
+
+        <section id="qr-container" class="no-display">
+            <header>
+                <img src="assets/logo-qr-generator.svg" alt="" />
+            </header>
+            <div id="qr-bg">
+                <div id="qr"></div>
+            </div>
+            <div class="buttons">
+                <a id="download" href="#" download="QR CODE">
+                    Download
+                    <img src="assets/download-solid.svg" alt="" />
+                </a>
+                <a id="share" href="#">
+                    Share
+                    <img src="assets/share-nodes-solid.svg" alt="" />
+                </a>
+            </div>
+        </section>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        ></script>
+        <script src="main.js" type="module"></script>
+    </body>
+</html>
