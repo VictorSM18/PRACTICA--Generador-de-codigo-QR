@@ -7,15 +7,25 @@ const qrContainer = document.getElementById("qr-container");
 const inputContainer = document.getElementById("first-container");
 
 getQR.addEventListener("click", () => {
-    let myQR = new QRCode(qrcode, inputUrl.value);
+    if (inputUrl.value) {
+        try {
+            new URL(inputUrl.value);
 
-    const canvas = document.querySelector("canvas");
-    const pngDataUrl = canvas.toDataURL("image/png");
+            new QRCode(qrcode, inputUrl.value);
 
-    downloadBtn.href = pngDataUrl;
+            const canvas = document.querySelector("canvas");
+            const pngDataUrl = canvas.toDataURL("image/png");
 
-    inputContainer.classList.add("no-display");
-    qrContainer.classList.remove("no-display");
+            downloadBtn.href = pngDataUrl;
+
+            inputContainer.classList.add("no-display");
+            qrContainer.classList.remove("no-display");
+        } catch (err) {
+            alert("The submitted URL is invalid, please try again");
+        }
+    } else {
+        alert("Please enter a valid URL");
+    }
 });
 
 shareBtn.addEventListener("click", () => {
